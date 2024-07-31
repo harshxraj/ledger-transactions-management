@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const storedAuth = JSON.parse(localStorage.getItem("auth"));
     setUserAuth(storedAuth);
-  }, [auth]); // Update when 'auth' changes
+  }, [auth]); 
 
   return (
     <div>
