@@ -10,7 +10,7 @@ const Login = () => {
     password: "123456",
   });
   const navigate = useNavigate();
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = "https://ledger-transactions-management-1.onrender.com";
   const { setAuth } = useAuth();
 
   const handleLogin = async (e) => {
