@@ -41,15 +41,15 @@ const AddLedgerModal = ({ isOpen, onClose }) => {
     <Dialog
       open={isOpen}
       as="div"
-      className="relative border z-10 focus:outline-none text-slate-100"
+      className="relative border z-10 focus:outline-none text-slate-100 w-[440px]"
       onClose={onClose}
     >
       <Toaster />
-      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div className="fixed inset-0 z-10 w- overflow-y-auto">
         <div className="flex min-h-full items-center justify-center p-4">
           <DialogPanel
             style={{ backgroundColor: "#fce073" }}
-            className="w-full max-w-md rounded-xl bg-blue-900 p-6 backdrop-blur-2xl duration-300 ease-out border-2 border-black"
+            className="w-[900px] rounded-xl bg-blue-900 p-6 backdrop-blur-2xl duration-300 ease-out border-2 border-black"
           >
             <DialogTitle
               as="h3"

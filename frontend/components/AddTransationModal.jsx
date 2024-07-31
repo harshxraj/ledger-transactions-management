@@ -48,7 +48,7 @@ const AddTransationModal = ({ isOpen, onClose, ledgerName }) => {
         <div className="flex min-h-full items-center justify-center p-4">
           <DialogPanel
             style={{ backgroundColor: "#b0d4ff" }}
-            className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out border-2 border-black"
+            className="w-[900px] max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out border-2 border-black"
           >
             <DialogTitle as="h3" className="text-2xl font-semibold flex justify-between items-center">
               Add a transaction
