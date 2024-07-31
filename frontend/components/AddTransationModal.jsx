@@ -10,7 +10,7 @@ const AddTransationModal = ({ isOpen, onClose, ledgerName }) => {
   const { selectedLedger } = useAuth();
   const [amount, setAmount] = useState("");
   const [type, setType] = useState("given");
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = "https://ledger-transactions-management-1.onrender.com";
   const auth = JSON.parse(localStorage.getItem("auth"));
 
   const handleAddTransaction = async () => {

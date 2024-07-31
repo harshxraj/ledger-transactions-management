@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Create context
 const AuthContext = createContext();
-const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl = "https://ledger-transactions-management-1.onrender.com";
 
 // Create a provider component
 export const AuthProvider = ({ children }) => {

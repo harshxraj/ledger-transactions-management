@@ -58,7 +58,7 @@ const Homepage = () => {
   }
 
   const fetchTransactions = async (ledgerId) => {
-    const link = `http://localhost:9000/transaction/${ledgerId}`;
+    const link = `https://ledger-transactions-management-1.onrender.com/transaction/${ledgerId}`;
     console.log("LINK", link, auth.token, selectedLedger);
     try {
       const response = await axios.get(link, {

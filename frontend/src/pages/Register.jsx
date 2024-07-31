@@ -10,7 +10,7 @@ const Register = () => {
     password: "",
   });
 
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = "https://ledger-transactions-management-1.onrender.com";
 
   const handleRegister = async (e) => {
     e.preventDefault();

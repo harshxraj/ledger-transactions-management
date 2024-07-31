@@ -25,16 +25,19 @@ const TransactionHistoryModal = ({ isOpen, onClose, transactions }) => {
     const formattedEndDate = formatDateForBackend(endDate);
 
     try {
-      const response = await axios.get(`http://localhost:9000/transaction/${selectedLedger}`, {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${auth.token}`,
-        },
-        params: {
-          startDate: formattedStartDate,
-          endDate: formattedEndDate,
-        },
-      });
+      const response = await axios.get(
+        `https://ledger-transactions-management-1.onrender.com/transaction/${selectedLedger}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${auth.token}`,
+          },
+          params: {
+            startDate: formattedStartDate,
+            endDate: formattedEndDate,
+          },
+        }
+      );
       console.log("HERE", response.data);
     } catch (error) {
       console.error("Error fetching transactions:", error);
@@ -44,7 +47,7 @@ const TransactionHistoryModal = ({ isOpen, onClose, transactions }) => {
   const handleDownload = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:9000/transaction/pdf",
+        "https://ledger-transactions-management-1.onrender.com/transaction/pdf",
         {
           ledgerId: selectedLedger,
           startDate: formatDateForBackend(startDate),
